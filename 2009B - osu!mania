@@ -1,0 +1,43 @@
+-> How to approach the question <-
+//1-> As you can see that there are n rows and 4 columns 
+//So we are going to use the 2D array which is used to create a matrix like structure
+//We will take the input using the first loop
+//Then in the second loop we are going to iterate from the last row as given in the question 
+//i-> n-1 -> denoting the last element from the array till the i>=0
+//j=0 to j<4 denoting the column in the matrix that we have created 
+// Then we are going to check the value is equal to # or not if yes
+//We will print the Column as (j+1) as we have started from the 0th index only. 
+//Submit
+
+#include <iostream>  
+using namespace std;  
+
+int main() {  
+    int t;  
+    cin >> t; // Number of test cases  
+    while (t--) {  
+        int n;  
+        cin >> n; // Number of rows  
+        char arr[n][4]; // Array to hold the rows  
+
+        // Read the input  
+        for (int i = 0; i < n; i++) {  
+            for (int j = 0; j < 4; j++) {  
+                cin >> arr[i][j];  
+            }  
+        }  
+
+        // Process from the bottommost row to the topmost row  
+        for (int i = n - 1; i >= 0; i--) { // Start from the last row  
+            for (int j = 0; j < 4; j++) {  
+                if (arr[i][j] == '#') { // Check for the note  
+                    cout << (j + 1) << " "; // Output the column (1-indexed)  
+                    break; // Break since we found the note  
+                }  
+            }  
+        }  
+        cout << endl; // New line after each test case output  
+    }  
+
+    return 0;  
+}
