@@ -1,0 +1,19 @@
+->This is the easiest question that you will find on the Codeforce 
+-> You may want to use loop iterate the value of c and many more concept 
+-> But this can be solved by using the concept of just adding the value which will result you the answer 
+-> Like-> (c-a)+(b-c)= B-A only which is your required answer
+-> Code Start From here
+#include <iostream>  
+using namespace std;  
+
+int main() {  
+    int t;  
+    cin >> t;
+    while (t--) {  
+        int a, b;  
+        cin >> a >> b; // Read the values of a and b  
+        // The minimum value of (c - a) + (b - c) is simply b - a  
+        cout << (b - a) << endl;
+    }  
+    return 0;  
+}
