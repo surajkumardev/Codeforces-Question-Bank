@@ -3,5 +3,6 @@
   int largest(vector<int> &arr) {
         // code here
         int large=*max_element(arr.begin(), arr.end());
+        int min=*min_element(arr.begin(), arr.end()); //this line will print the minimum number of the given array 
         return large;
     }
