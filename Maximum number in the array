@@ -1,0 +1,7 @@
+
+  //c++ code to find the maximum number in the given list 
+  int largest(vector<int> &arr) {
+        // code here
+        int large=*max_element(arr.begin(), arr.end());
+        return large;
+    }
